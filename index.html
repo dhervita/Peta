@@ -21,6 +21,7 @@
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
+        <script src="js/leaflet-svg-shape-markers.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -35,7 +36,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-10.104126409127993,110.10606126706834],[-5.950719896677211,115.30665644276469]]);
+        }).fitBounds([[-9.638684149589766,110.58509760359848],[-6.3843814671040535,114.65990000496623]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -721,16 +722,17 @@
         function style_2020_2_0() {
             return {
                 pane: 'pane_2020_2',
+                shape: 'square',
                 radius: 4.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(114,155,111,1.0)',
+                fillColor: 'rgba(255,127,0,1.0)',
                 interactive: true,
             }
         }
@@ -749,7 +751,7 @@
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_2020_2_0(feature));
+                return L.shapeMarker(latlng, style_2020_2_0(feature));
             },
         });
         bounds_group.addLayer(layer_2020_2);
@@ -799,16 +801,17 @@
         function style_2021_3_0() {
             return {
                 pane: 'pane_2021_3',
-                radius: 4.0,
+                shape: 'diamond',
+                radius: 5.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1,
+                weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,158,23,1.0)',
+                fillColor: 'rgba(219,30,42,1.0)',
                 interactive: true,
             }
         }
@@ -827,7 +830,7 @@
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_2021_3_0(feature));
+                return L.shapeMarker(latlng, style_2021_3_0(feature));
             },
         });
         bounds_group.addLayer(layer_2021_3);
@@ -879,14 +882,14 @@
                 pane: 'pane_2022_4',
                 radius: 4.0,
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1,
+                weight: 2.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(232,113,141,1.0)',
+                fillColor: 'rgba(72,123,182,1.0)',
                 interactive: true,
             }
         }
